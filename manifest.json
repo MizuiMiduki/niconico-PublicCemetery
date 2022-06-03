@@ -1,5 +1,5 @@
 {
-    "name": "ニコニコ動画 共同墓地",
+    "name": "niconico-PublicCemetery",
     "version": "1.0",
     "manifest_version": 3,
     "description": "削除動画を開くと共同墓地に移動します",
