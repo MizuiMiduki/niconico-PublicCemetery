@@ -1,0 +1,111 @@
+/*COPYRIGHT (c) 2022 BlossomsArchive (C)2022 MizuiMiduki*/
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #efefef;
+    }
+
+/*ヘッダー部分*/
+.header-back{
+    background-color: #252525;
+    width: 100%;
+    padding: 3px 0 3px 0;
+}
+.title-area{
+    width: fit-content;
+    margin-left: 10px;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+.title{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.sub-title{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*メイン部分*/
+main{
+    flex: auto;
+    display: flex;
+}
+.mode-select-area{
+    margin: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px 0 #252525;
+}
+.main-inner{
+width: 70%;
+}
+.news-area{
+width: 30%;
+}
+.news{
+    box-shadow: 0 5px 10px 0 #252525;
+    background-color: #ffffff;
+    margin-top: 16.080px;
+}
+
+/*フッター部分*/
+.footer-back{
+    background-color: #252525;
+    margin-top: auto;
+}
+.footer-text{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;}
+  .tab_item {
+    width: calc(100%/3);
+    border-bottom: 3px solid #dddddd;
+    background-color: #fafafa;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #252525;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  input[name="tab_item"] {
+    display: none;
+  }
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  #normal:checked ~ #normal_content,
+  #random:checked ~ #random_content,
+  #manual:checked ~ #manual_content {
+    display: block;
+  }
+  .tabs input:checked + .tab_item {
+    background-color: #252525;
+    color: #ffffff;
+  }
