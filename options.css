@@ -1,0 +1,152 @@
+/*COPYRIGHT (c) 2022 BlossomsArchive (C)2022 MizuiMiduki*/
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #efefef;
+    }
+
+/*ヘッダー部分*/
+.header-back{
+    background-color: #252525;
+    width: 100%;
+    padding: 3px 0 3px 0;
+    display: flex;
+}
+.title-area{
+    width: fit-content;
+    margin-left: 10px;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+.title{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.sub-title{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.status-area{
+  color: rgb(217, 163, 0);
+  width: fit-content;
+  margin:0 100px 0 auto;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  width: fit-content;
+}
+.status-area h3{
+  margin: 0;
+  padding: 0;
+  border-left: solid 1px #dddddd;
+  padding-left: 5px;
+}
+/*メイン部分*/
+main{
+    flex: auto;
+    display: flex;
+}
+.mode-select-area{
+  margin: 20px;
+  background-color: #ffffff;
+}
+.main-inner{
+  width: 70%;
+  margin: 10px;
+}
+.news-area{
+width: 30%;
+}
+.news{
+    box-shadow: 0 5px 10px 0 #252525;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+iframe{
+  border:solid 3px #252525;
+  box-shadow: 0 5px 10px 0 #252525;
+  margin: 10px;
+}
+.button-style{
+  text-align: center;
+}
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 5px 10px 0 #252525;
+}
+.tab_item {
+  width: calc(100%/3);
+  border-bottom: 3px solid #dddddd;
+  background-color: #fafafa;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #252525;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+input[name="tab_item"] {
+  display: none;
+}
+.tab_content {
+  display: none;
+  padding: 0 40px 0 40px ;
+  clear: both;
+  overflow: hidden;
+}
+#normal:checked ~ #normal_content,
+#random:checked ~ #random_content,
+#manual:checked ~ #manual_content {
+  display: block;
+}
+.tabs input:checked + .tab_item {
+  background-color: #252525;
+  color: #ffffff;
+}
+.movie-style{
+  text-align: center;
+  width: 100%;
+}
+.select-button{
+  width: 40%;
+  background-color: #252525;
+  color: white;
+  border-radius: 20px;
+}
+.select-button:active{
+  width: 40%;
+  background-color: white;
+  color: #252525;
+  border-radius: 20px;
+}
+/*フッター部分*/
+.footer-back{
+    background-color: #252525;
+    margin-top: auto;
+    padding: 5px 0 5px 0;
+}
+.footer-text{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+}

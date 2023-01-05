@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="options.js"></script>
+    <link rel="stylesheet" href="options.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+    <title>nPC-settings</title>
+</head>
+<body>
+    <!--カラム設定-->
+    <div style="height: 100%; display: flex; flex-direction: column">
+
+    <!--ヘッダー-->
+    <header>
+        <div class="header-back">
+            <div class="title-area">
+            <h1 class="title">ニコニコ動画 共同墓地</h1>
+            <p class="sub-title">niconico-movie　PublicCemetery</p>
+            </div>
+            
+            <div class="status-area">
+                <h3>モード：<span id="status-mode"></span></h3>
+            </div>
+        </div>
+    </header>
+
+    <!--メイン-->
+    <main>
+        <!--モードエリア-->
+        <div class="main-inner">
+            <div class="mode_select-area">
+                <!--モードタブ-->
+                    <div class="tabs">
+                        <!--モードタブ上部分-->
+                        <input id="normal" type="radio" name="tab_item" checked>
+                        <label class="tab_item" for="normal" id="normal_tab_name">ノーマル</label>
+                        <input id="random" type="radio" name="tab_item">
+                        <label class="tab_item" for="random" id="random_tab_name">ランダム</label>
+                        <input id="manual" type="radio" name="tab_item" id="manual_tab_name">
+                        <label class="tab_item" for="manual">マニュアル</label>
+                        
+                        <!--モードエリア中身-->
+                        <!--ノーマルモード-->
+                        <div class="tab_content" id="normal_content">
+                            <h2 style="text-align: center; text-decoration: underline dotted;">ノーマルモードではこちらの削除動画へ遷移します</h2>
+                            <div class="button-style"><button id="normal_save" class="select-button">ノーマルモードにする</button></div>
+                            <div class="movie-style">
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm38213757" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm38213757">削除動画</a></iframe>
+                            </div>
+                        </div>
+                        <!--ランダムモード-->
+                        <div class="tab_content" id="random_content">
+                            <h2 style="text-align: center; text-decoration: underline dotted;">ランダムモードではこちらの削除動画へ遷移します</h2>
+                            <div class="button-style"><button id="random_save" class="select-button">ランダムモードにする</button></div>
+                            <div class="movie-style">
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19139061" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19139061">haishin</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm27404927" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm27404927">アップロード者削除_桜ノ雨編</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm38213757" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm38213757">削除動画</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm21764448" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm21764448">【削除動画】 アップロード者削除</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm21764440" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm21764440">【削除動画】 配信期間終了</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm21764424" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm21764424">【削除動画】 権利者の申し立て</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19668914" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19668914">配信期間終了による削除</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19668700" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19668700">権利者の申し立てによる削除</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19668547" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19668547">アップロード者削除</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19557682" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19557682">初代削除動画2007年1月15日</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19140178" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19140178">削除動画 葛城ミサトver</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm27404936" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm27404936">配信期間終了_桜ノ雨編</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm27404931" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm27404931">権利者削除_桜ノ雨編</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19139071" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19139071">kenri</a></iframe>
+                            <iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm19139067" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm19139067">upload</a></iframe>
+                            </div>
+                        </div>
+                        <!--マニュアルモード-->
+                        <div class="tab_content" id="manual_content">
+                            <h1 style="text-align: center;">ランダムモードはR3.0で追加予定です</h1>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    <!--ニュースエリア-->
+        <div class="news-area">
+            <div class="news">
+                <div style="padding:5px;">
+                <h2>更新履歴</h2>
+                <p>R1.0 : ファーストリリース。<br>
+                   R1.1 : プレミアム会員限定機能“レジューム再生”により、ユーザーの使用状況によって削除動画が0秒から再生されない不具合を修正<br>
+                   R1.2 : オプション画面βを追加<br>
+                   R2.0 : ランダムモードを追加・動作速度を大幅改善<br>
+                </p>
+                <hr>
+                <h2>更新予定</h2>
+                <p>
+                    R3.0 : ユーザー指定(マニュアル)モードを追加<br>
+                    R4.0 : ランダムモードに絞り込み機能を追加
+                </p>
+                <hr>
+                <h2>開発方針の決議について</h2>
+                <td>
+                    <li>原則として機能などについての方針はアンケートで決定します。</li>
+                    <li>アンケートは、本拡張機能がニコニコ動画向けなことを踏まえ、Twitterコミュニティー『ニコニコふぁんくらぶ』にて行います。</li>
+                    <li>アンケート内容およびその結果は下記、GitHubの本プロジェクト内README.mdにあるアンケート議事録に記録します。</li>
+                </td>
+                <hr>
+                <h2>ライセンス</h2>
+                <p>本拡張機能はMITライセンスで配布します。<br>
+                    同梱しているJqureryはMITライセンスのもとに再配布しています。<br>
+                    "ニコニコ動画"は株式会社ドワンゴの登録商標です。
+                </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--フッター-->
+    <footer>
+        <div class="footer-back">
+            <p class="footer-text">&copy 2022-<span id="year1"></span> MizuiMiduki &copy 2022-<span id="year2"></span> BlossomsArchive | Release 2.0 : <a href="https://github.com/MizuiMiduki/niconico-PublicCemetery" target="_blank" rel="noreferrer noopener" class="footer-text">SourceCode(GitHub)</a></p>
+        </div>
+    </footer>
+
+    </div>
+</body>
+</html>

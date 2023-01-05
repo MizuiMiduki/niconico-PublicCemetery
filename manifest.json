@@ -1,0 +1,16 @@
+{
+    "name": "ニコニコ共同墓地",
+    "version": "2.0",
+    "manifest_version": 3,
+    "description": "削除動画を開くと共同墓地に移動します",
+    "permissions": [
+        "storage"
+      ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.nicovideo.jp/*","https://sp.nicovideo.jp/*"],
+            "js":["jquery-3.6.0.min.js","main.js"]
+        }
+    ],
+    "options_page":"options.html"
+}
