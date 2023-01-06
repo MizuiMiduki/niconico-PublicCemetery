@@ -12,5 +12,8 @@
             "js":["jquery-3.6.0.min.js","main.js"]
         }
     ],
-    "options_page":"options.html"
+    "background": {
+        "service_worker": "iconclicked.js"
+    },
+    "action": {}
 }
