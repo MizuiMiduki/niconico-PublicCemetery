@@ -1,18 +1,16 @@
 /*COPYRIGHT (c) 2022 BlossomsArchive (C)2022 MizuiMiduki*/
 
 //ローカルストレージ呼び出し
-$(function(){
-  chrome.storage.local.get(["mode"], function(pattern) {
+$(function () {
+  chrome.storage.local.get(["mode"], function (pattern) {
     var select_mode = pattern.mode;
 
-if($('.ErrorMessage').length){
-  //通常モード
-    if("normal" == select_mode){
+    if ($('.ErrorMessage').length) {
+      //通常モード
+      if ("normal" == select_mode) {
         window.location.href = "https://nico.ms/sm38213757?from=0";
-    }
-
-  //ランダムモード
-    if("random" == select_mode){
+      } else if ("random" == select_mode) {
+        //ランダムモード
         f_redirect();
         function f_redirect() {
           var arr = [
@@ -32,11 +30,13 @@ if($('.ErrorMessage').length){
             'https://nico.ms/sm19139071?from=0',
             'https://nico.ms/sm19139067?from=0'
           ];
-        var num = arr.length;
-        if (arr.length == 0) return false;        
+          var num = arr.length;
+          if (arr.length == 0) return false;
           var num = Math.floor(Math.random() * arr.length);
           location.href = arr[num];
         }
+      } else {
+        window.location.href = "https://nico.ms/sm38213757?from=0";
       }
     }
   });

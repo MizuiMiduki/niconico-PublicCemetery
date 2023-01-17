@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
   //ノーマルモード保存
   $("#normal_save").click(function () {
     chrome.storage.local.set(
@@ -6,11 +6,11 @@ $(function(){
         "mode": "normal",
       }
     );
-    window.location.reload();
-});
+    location.reload()
+  });
 });
 
-$(function(){
+$(function () {
   //ランダムモード保存
   $("#random_save").click(function () {
     chrome.storage.local.set(
@@ -18,11 +18,11 @@ $(function(){
         "mode": "random",
       }
     );
-    window.location.reload();
+    location.reload()
   });
 });
 
-$(function(){
+$(function () {
   //マニュアルモード保存
   $("#manual_save").click(function () {
     chrome.storage.local.set(
@@ -30,24 +30,27 @@ $(function(){
         "mode": "manual",
       }
     );
-    window.location.reload();
+    location.reload()
   });
 });
 
-$(function(){
+$(function () {
   //ステータス表示
-  chrome.storage.local.get(["mode"], function(pattern) {
+  chrome.storage.local.get(["mode"], function (pattern) {
     var select_mode = pattern.mode;
-    if("normal" == select_mode){
-    $("#status-mode").text ("ノーマル");
-    }else if("random" == select_mode){
-      $("#status-mode").text ("ランダム");
-    }else if("manual" == select_mode){
-      $("#status-mode").text ("マニュアル");
+    if ("normal" == select_mode) {
+      $("#status-mode").text("ノーマル");
+    } else if ("random" == select_mode) {
+      $("#status-mode").text("ランダム");
+    } else if ("manual" == select_mode) {
+      $("#status-mode").text("マニュアル");
+    } else {
+      $("#status-mode").text("モードを選択してください");
     }
   });
 });
 
-$(function() {
-  $("#year1").text (new Date().getFullYear());
-  $("#year2").text (new Date().getFullYear());});
+$(function () {
+  $("#year1").text(new Date().getFullYear());
+  $("#year2").text(new Date().getFullYear());
+});

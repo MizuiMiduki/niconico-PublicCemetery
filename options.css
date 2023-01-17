@@ -1,83 +1,133 @@
 /*COPYRIGHT (c) 2022 BlossomsArchive (C)2022 MizuiMiduki*/
 
-html{
-    width: 100%;
-    height: 100%;
+html {
+  width: 100%;
+  height: 100%;
 }
-body{
-    height: 100%;
-    margin: 0;
-    background-color: #efefef;
-    }
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
 
 /*ヘッダー部分*/
-.header-back{
-    background-color: #252525;
-    width: 100%;
-    padding: 3px 0 3px 0;
-    display: flex;
+.header-back {
+  background-color: #252525;
+  width: 100%;
+  padding: 3px 0 3px 0;
+  display: flex;
 }
-.title-area{
-    width: fit-content;
-    margin-left: 10px;
-    font-family: 'Kosugi Maru', sans-serif;
-}
-.title{
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-.sub-title{
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-.status-area{
-  color: rgb(217, 163, 0);
+
+.title-area {
   width: fit-content;
-  margin:0 100px 0 auto;
-  font-weight: 900;
-  display: grid;
+  margin-left: 10px;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.title {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-title {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.right-area {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
   place-items: center;
-  width: fit-content;
+
 }
-.status-area h3{
+
+.status-area {
+  color: rgb(217, 163, 0);
+  margin: 0 100px 0 0;
+  font-weight: 900;
+  place-items: center;
+  font-size: px;
+  line-height: 100%;
+}
+
+.status-area h3 {
   margin: 0;
   padding: 0;
   border-left: solid 1px #dddddd;
   padding-left: 5px;
 }
-/*メイン部分*/
-main{
-    flex: auto;
-    display: flex;
+
+.notification-area {
+  width: fit-content;
+  place-items: center;
+  width: fit-content;
 }
-.mode-select-area{
+
+.notification-icon {
+  fill: white;
+  margin: 0;
+  padding: 0;
+}
+
+/*メイン部分*/
+
+.news-area {
+  display: none;
+  position: absolute;
+}
+
+.news-area:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: 24px;
+  transform: rotateZ(180deg);
+  width: 30%;
+}
+
+.notification-area:hover .news-area {
+  display: inline-block;
+}
+
+main {
+  flex: auto;
+  display: flex;
+}
+
+.mode-select-area {
   margin: 20px;
   background-color: #ffffff;
 }
-.main-inner{
-  width: 70%;
+
+.main-inner {
+  width: 100%;
   margin: 10px;
 }
-.news-area{
-width: 30%;
+
+.news {
+  box-shadow: 0 5px 10px 0 #252525;
+  background-color: #ffffff;
+  margin-top: 10px;
 }
-.news{
-    box-shadow: 0 5px 10px 0 #252525;
-    background-color: #ffffff;
-    margin-top: 10px;
+.news h2{
+  margin: 0;
 }
 
-iframe{
-  border:solid 3px #252525;
+iframe {
+  border: solid 3px #252525;
   box-shadow: 0 5px 10px 0 #252525;
   margin: 10px;
 }
-.button-style{
+
+.button-style {
   text-align: center;
 }
+
 .tabs {
   margin-top: 50px;
   padding-bottom: 40px;
@@ -86,6 +136,7 @@ iframe{
   margin: 0 auto;
   box-shadow: 0 5px 10px 0 #252525;
 }
+
 .tab_item {
   width: calc(100%/3);
   border-bottom: 3px solid #dddddd;
@@ -100,53 +151,63 @@ iframe{
   font-weight: bold;
   transition: all 0.2s ease;
 }
+
 .tab_item:hover {
   opacity: 0.75;
 }
+
 input[name="tab_item"] {
   display: none;
 }
+
 .tab_content {
   display: none;
-  padding: 0 40px 0 40px ;
+  padding: 0 40px 0 40px;
   clear: both;
   overflow: hidden;
 }
-#normal:checked ~ #normal_content,
-#random:checked ~ #random_content,
-#manual:checked ~ #manual_content {
+
+#normal:checked~#normal_content,
+#random:checked~#random_content,
+#manual:checked~#manual_content {
   display: block;
 }
-.tabs input:checked + .tab_item {
+
+.tabs input:checked+.tab_item {
   background-color: #252525;
   color: #ffffff;
 }
-.movie-style{
+
+.movie-style {
   text-align: center;
   width: 100%;
 }
-.select-button{
+
+.select-button {
   width: 40%;
   background-color: #252525;
   color: white;
   border-radius: 20px;
 }
-.select-button:active{
+
+.select-button:hover {
   width: 40%;
   background-color: white;
   color: #252525;
   border-radius: 20px;
 }
+
 /*フッター部分*/
-.footer-back{
-    background-color: #252525;
-    margin-top: auto;
-    padding: 5px 0 5px 0;
+.footer-back {
+  background-color: #252525;
+  margin-top: auto;
+  padding: 5px 0 5px 0;
 }
-.footer-text{
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    text-align: center;
+
+.footer-text {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
 }

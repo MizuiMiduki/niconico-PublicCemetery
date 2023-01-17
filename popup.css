@@ -1,0 +1,62 @@
+.popup-body {
+    width: 300px;
+    height: fit-content;
+    margin: 0;
+}
+
+.popup-logo {
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.popup-logo-area {
+    background-color: #252525;
+    padding: 5px 0px 5px 10px;
+}
+
+.select-mode-title {
+    font-size: 1.5em;
+}
+
+#open_options {
+    width: 100%;
+    height: auto;
+    border-color: #252525;
+    background-color: #252525;
+    color: white;
+}
+
+#open_options:hover {
+    width: 100%;
+    height: auto;
+    border-color: #747373;
+    background-color: #747373;
+    color: white;
+}
+
+#status-mode-popup {
+    text-align: center;
+}
+
+.config-hr{
+    margin: 0;
+    width: 100%;
+    color: white;
+}
+
+#open_niconico{
+    width: 100%;
+    height: auto;
+    border-color: #252525;
+    background-color: #252525;
+    color: white;
+}
+
+#open_niconico:hover {
+    width: 100%;
+    height: auto;
+    border-color: #747373;
+    background-color: #747373;
+    color: white;
+}
