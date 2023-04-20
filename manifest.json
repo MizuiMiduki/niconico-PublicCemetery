@@ -1,11 +1,16 @@
 {
     "name": "ニコニコ共同墓地",
-    "version": "2.1",
+    "version": "2.2",
     "manifest_version": 3,
     "description": "削除動画を開くと共同墓地に移動します",
     "permissions": [
         "storage"
     ],
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
     "content_scripts": [
         {
             "matches": [
