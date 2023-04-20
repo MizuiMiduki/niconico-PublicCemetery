@@ -53,9 +53,4 @@ $(function () {
 $(function () {
   $("#year1").text(new Date().getFullYear());
   $("#year2").text(new Date().getFullYear());
-  chrome.storage.local.set(
-    {
-      "count": 0,
-    }
-  );
 });

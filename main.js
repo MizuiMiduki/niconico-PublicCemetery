@@ -9,7 +9,7 @@ $(function () {
 
       if ($('.ErrorMessage').length) {
 
-        if (count < 3) {
+        if (count < 1) {
           //通常モード
           if ("normal" == select_mode) {
           window.location.href = "https://nico.ms/sm38213757?from=0";
