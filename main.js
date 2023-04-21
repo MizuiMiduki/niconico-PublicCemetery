@@ -7,12 +7,20 @@ $(function () {
     chrome.storage.local.get(["count"], function (pattern) {
       var count = pattern.count;
 
+      if ($(mode = manual)) {
+        chrome.storage.local.set(
+          {
+            "mode": "nomal",
+          }
+        )
+      };
+      
       if ($('.ErrorMessage').length) {
 
         if (count < 1) {
           //通常モード
           if ("normal" == select_mode) {
-          window.location.href = "https://nico.ms/sm38213757?from=0";
+            window.location.href = "https://nico.ms/sm38213757?from=0";
           } else if ("random" == select_mode) {
             //ランダムモード
             f_redirect();
@@ -47,10 +55,10 @@ $(function () {
         }
         chrome.storage.local.set(
           {
-            "count": count+1,
+            "count": count + 1,
           }
         );
-      }else{
+      } else {
         chrome.storage.local.set(
           {
             "count": 0,
