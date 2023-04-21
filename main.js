@@ -6,14 +6,6 @@ $(function () {
     var select_mode = pattern.mode;
     chrome.storage.local.get(["count"], function (pattern) {
       var count = pattern.count;
-
-      if ($(mode = manual)) {
-        chrome.storage.local.set(
-          {
-            "mode": "nomal",
-          }
-        )
-      };
       
       if ($('.ErrorMessage').length) {
 
