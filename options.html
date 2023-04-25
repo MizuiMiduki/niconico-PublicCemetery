@@ -37,12 +37,7 @@
                             <div class="news">
                                 <div style="padding:5px;">
                                     <h2>更新内容</h2>
-                                    <p>R2.2.2 : コードのミスを修正
-                                    </p>
-                                    <hr>
-                                    <h2>更新予定</h2>
-                                    <p>
-                                        R4.0 : ランダムモードに絞り込み機能を追加
+                                    <p>R3.0 : マニュアルモードを追加
                                     </p>
                                     <hr>
                                     <h2>開発方針の決議について</h2>
@@ -152,13 +147,26 @@
                         </div>
                         <!--マニュアルモード-->
                         <div class="tab_content" id="manual_content">
-                            <h1 style="text-align: center;">マニュアルモードは任意の動画へ遷移します</h1>
-                            <div class="movie-style">
-                           
+                            <h2 style="text-align: center; text-decoration: underline dotted;">マニュアルモードは任意の動画へ遷移します</h2>
+                            <form style="text-align: center; width: 40%; margin: 0 auto; margin-bottom: 1%;">
+                                <p>動画idを入力してモード変更ボタンを押してください</p>
+                                <select name="prefecture" id="id_select" required>
+                                <option value="">ID</option>
+                                <option value="sm">sm</option>
+                                <option value="nm" >nm</option>
+                                </select>
+                                <input type="number" id="manual_url_box" placeholder="number">
+                            </form>
+                            <div class="button-style"><button id="manual_save"
+                                    class="select-button">マニュアルモードにする</button>
+                                <div class="movie-style">
+                                    <iframe name="manual_iframe" id="manual_iframe" width="312" height="176"
+                                        src="https://nicovideo.jp" scrolling="no" style="border:solid 1px #ccc;"
+                                        frameborder="0"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
         </main>
 

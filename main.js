@@ -6,10 +6,21 @@ $(function () {
     var select_mode = pattern.mode;
     chrome.storage.local.get(["count"], function (pattern) {
       var count = pattern.count;
-      
-      if ($('.ErrorMessage').length) {
 
-        if (count < 1) {
+      if ($('.ErrorMessage').length) {
+        if ("manual" == select_mode) {
+          if (count == 1) {
+            window.location.href = "https://nico.ms/sm38213757?from=0";
+          } else if (count < 1) {
+            chrome.storage.local.get(["manual_id"], function (pattern) {
+              var id = pattern.manual_id;
+              chrome.storage.local.get(["manual_url"], function (pattern) {
+                var url = pattern.manual_url;
+                window.location.href = "https://nico.ms/" + id + url + "?from=0";
+              })
+            });
+          }
+        } else if (count < 1) {
           //通常モード
           if ("normal" == select_mode) {
             window.location.href = "https://nico.ms/sm38213757?from=0";
@@ -39,8 +50,6 @@ $(function () {
               var num = Math.floor(Math.random() * arr.length);
               location.href = arr[num];
             }
-          } else if ("manual" == select_mode) {
-
           } else {
             window.location.href = "https://nico.ms/sm38213757?from=0";
           }
