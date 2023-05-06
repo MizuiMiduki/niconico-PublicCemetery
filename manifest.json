@@ -1,6 +1,6 @@
 {
     "name": "ニコニコ共同墓地",
-    "version": "3.0",
+    "version": "3.1",
     "manifest_version": 3,
     "description": "削除動画を開くと共同墓地に移動します",
     "permissions": [

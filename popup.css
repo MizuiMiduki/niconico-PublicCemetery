@@ -1,3 +1,7 @@
+html{
+    width: fit-content;
+    overflow: hidden;
+}
 .popup-body {
     width: 300px;
     height: fit-content;
