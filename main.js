@@ -2,6 +2,8 @@
 
 //ローカルストレージ呼び出し
 $(function () {
+  $('.common-header-1o7v8vg').after('<div style="color:white!important;"><p>お使いのブラウザ拡張機能"ニコニコ共同墓地"は2023/12/31をもってサポートされなくなります。後継の"<a href="https://github.com/MizuiMiduki/nicominabe" style="text-decoration:underline; color:white;">ニコ見なべ</a>"をご利用ください</p></div>');
+
   chrome.storage.local.get(["mode"], function (pattern) {
     var select_mode = pattern.mode;
     chrome.storage.local.get(["count"], function (pattern) {
